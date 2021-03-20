@@ -32,7 +32,7 @@ public class DoublyLinkedList <E> implements Iterable<E> {
 
     public boolean remove(Object o) {
         DoublyLinkedNode cur = head;
-        if( o.equals(head) )
+        if( o.equals(head.e) )
         {
             head = head.next;
             head.prev = null;
@@ -92,6 +92,7 @@ public class DoublyLinkedList <E> implements Iterable<E> {
             if( i == index )
                 return (E)cur.e;
 
+            cur = cur.next;
             i++;
         }
 
@@ -175,6 +176,7 @@ public class DoublyLinkedList <E> implements Iterable<E> {
         if( index == 0 )
         {
             head = head.next;
+            head.prev = null;
             old = (E)cur.e;
         }
         else {
@@ -183,7 +185,7 @@ public class DoublyLinkedList <E> implements Iterable<E> {
             while (cur != null) {
                 DoublyLinkedNode next = cur.next;
 
-                if (i == index) {
+                if (i == index - 1) {
                     if (next != null)
                         cur.next = next.next;
                     else

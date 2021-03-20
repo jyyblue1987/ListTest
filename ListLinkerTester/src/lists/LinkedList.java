@@ -178,7 +178,7 @@ public class LinkedList <E> implements Iterable<E> {
             while (cur != null) {
                 Node next = cur.next;
 
-                if (i == index) {
+                if (i == index - 1) {
                     if (next != null)
                         cur.next = next.next;
                     else
