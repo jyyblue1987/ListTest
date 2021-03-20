@@ -1,8 +1,6 @@
 package lists;
 
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 
 public class DoublyLinkedList <E> implements Iterable<E> {
     private int size;
@@ -21,7 +19,10 @@ public class DoublyLinkedList <E> implements Iterable<E> {
         return (indexOf(o) != -1);
     }
 
-    public Iterator<E> iterator() {
+    public ListIterator<E> iterator() {
+        return new ArrayListIterator();
+    }
+    public ListIterator<E> listIterator() {
         return new ArrayListIterator();
     }
 
@@ -168,6 +169,42 @@ public class DoublyLinkedList <E> implements Iterable<E> {
         return result;
     }
 
+    public E remove(int index) {
+        DoublyLinkedNode cur = head;
+        E old = null;
+        if( index == 0 )
+        {
+            head = head.next;
+            old = (E)cur.e;
+        }
+        else {
+            int i = 0;
+
+            while (cur != null) {
+                DoublyLinkedNode next = cur.next;
+
+                if (i == index) {
+                    if (next != null)
+                        cur.next = next.next;
+                    else
+                        cur.next = null;
+
+                    if( cur.next != null )
+                        cur.next.prev = cur;
+
+                    old = (E)cur.e;
+
+                    break;
+                }
+                cur = cur.next;
+                i++;
+            }
+        }
+
+        size--;
+        return old;
+    }
+
 
     public int indexOf(Object o)
     {
@@ -228,7 +265,7 @@ public class DoublyLinkedList <E> implements Iterable<E> {
     }
 
 
-    private class ArrayListIterator implements Iterator<E> {
+    private class ArrayListIterator implements ListIterator<E> {
 
         private DoublyLinkedNode current = head;
 
@@ -240,7 +277,10 @@ public class DoublyLinkedList <E> implements Iterable<E> {
         }
 
         public E next() {
-            if (!hasNext()) throw new java.util.NoSuchElementException();
+            if( current == null ) {
+                return null;
+            }
+
             E e = (E)current.e;
             current = current.next;
             return e;
@@ -253,11 +293,48 @@ public class DoublyLinkedList <E> implements Iterable<E> {
             return current.prev != null;
         }
 
-        public E prev() {
-            if (!hasPrevious()) throw new java.util.NoSuchElementException();
-            E e = (E)current.e;
+        public E previous() {
+            if( current == null ) {
+                DoublyLinkedNode cur = head;
+                while(cur != null)
+                {
+                    current = cur;
+                    cur = cur.next;
+                }
+
+                if( current == null )
+                    return null;
+                return (E)current.e;
+            }
+
             current = current.prev;
+            E e = (E)current.e;
             return e;
+        }
+
+        @Override
+        public int nextIndex() {
+            return 0;
+        }
+
+        @Override
+        public int previousIndex() {
+            return 0;
+        }
+
+        @Override
+        public void remove() {
+
+        }
+
+        @Override
+        public void set(E e) {
+
+        }
+
+        @Override
+        public void add(E e) {
+
         }
     }
 }

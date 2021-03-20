@@ -269,7 +269,9 @@ public class LinkedList <E> implements Iterable<E> {
         }
 
         public E next() {
-            if (!hasNext()) throw new java.util.NoSuchElementException();
+            if( current == null )
+                return null;
+
             E e = (E)current.e;
             current = current.next;
             return e;
