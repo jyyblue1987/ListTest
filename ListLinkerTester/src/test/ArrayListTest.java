@@ -219,7 +219,7 @@ public class ArrayListTest {
 		int sizeBeforeRemove = list.size();
 
 		String valueBeforeRemove = (String) list.get(removeAt);
-		boolean removed = list.remove(removeAt);
+		String removed = (String)list.remove(removeAt);
 		String valueAfterRemove = (String)list.get(removeAt);
 
 		assertEquals(value, removed);
@@ -237,7 +237,7 @@ public class ArrayListTest {
 		list.addAll(toAdd);
 		int sizeBeforeRemove = list.size();
 
-		boolean removed = list.remove(removeAt);
+		String removed = (String)list.remove(removeAt);
 
 		assertNull(removed);
 		assertEquals(sizeBeforeRemove, list.size());

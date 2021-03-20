@@ -32,14 +32,7 @@ public class ArrayList<E> implements Iterable<E> {
 
     public boolean remove(Object o) {
         int index = indexOf(o);
-        if( index < 0 )
-            return false;
-        
-        for (int i = index; i < size - 1; i++) {
-            items[i] = items[i + 1];
-        }
-        size--;
-        return true;
+        return remove(index) != null;
     }
 
     public boolean addAll(Collection<? extends E> c) {
@@ -52,7 +45,7 @@ public class ArrayList<E> implements Iterable<E> {
     }
 
     public boolean addAll(int index, Collection<? extends E> c) {
-        int i = 0;
+        int i = index;
         for (E e : c){
             if( add(i, e) == false )
                 return false;
@@ -93,6 +86,19 @@ public class ArrayList<E> implements Iterable<E> {
         size++;
 
         return true;
+    }
+
+    public E remove(int index) {
+        if( index < 0 || index >= size )
+            return null;
+
+        E old = items[index];
+
+        for (int i = index; i < size - 1; i++) {
+            items[i] = items[i + 1];
+        }
+        size--;
+        return old;
     }
 
 
