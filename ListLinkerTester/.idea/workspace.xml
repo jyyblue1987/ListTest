@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5c60ce76-02a9-4464-80af-bbd3a2cfdc48" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/libs/hamcrest-2.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libs/junit-4.13.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lists/ArrayList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lists/DoublyLinkedList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lists/DoublyLinkedNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lists/LinkedList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lists/Node.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/main/java/lists/LinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/../src/main/java/lists/LinkedList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/junit_jupiter_api_5_7_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/junit-jupiter-api-5.7.1.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ListLinkerTester.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ListLinkerTester.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ListLinkerTester/test/ArrayListTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ListLinkerTester/test/ArrayListTest.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,24 +21,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="52" selection-start-line="18" selection-start-column="52" selection-end-line="18" selection-end-column="52" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/lists/ArrayList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="142" selection-start-line="142" selection-end-line="142" />
+            <state relative-caret-position="68">
+              <caret line="4" column="36" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
               <folding>
+                <element signature="e#210#211#0" expanded="true" />
+                <element signature="e#233#234#0" expanded="true" />
+                <element signature="e#2846#2847#0" expanded="true" />
                 <element signature="e#2873#2874#0" expanded="true" />
               </folding>
             </state>
@@ -57,11 +45,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/ArrayListTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4556">
-              <caret line="279" column="16" selection-start-line="279" selection-start-column="16" selection-end-line="279" selection-end-column="16" />
+            <state relative-caret-position="272">
+              <caret line="94" column="34" selection-start-line="94" selection-start-column="34" selection-end-line="94" selection-end-column="34" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -71,9 +62,11 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>@Test</find>
+      <find>void</find>
     </findStrings>
     <replaceStrings>
       <replace>private static</replace>
+      <replace>public void</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -84,6 +77,7 @@
       <list>
         <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/test/ArrayListTest.java" />
+        <option value="$PROJECT_DIR$/src/lists/ArrayList.java" />
       </list>
     </option>
   </component>
@@ -168,7 +162,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ArrayListTest.add_ExpectListSizeToIncreaseBy1">
+  <component name="RunManager" selected="JUnit.ArrayListTest.addAll_AtSpecificIndex_ShouldAddAllItemsAtIndex">
     <configuration name="Main" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="ListLinkerTester" />
@@ -179,7 +173,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ArrayListTest.add_ExpectListSizeToIncreaseBy1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ArrayListTest.addAll_AtSpecificIndex_ShouldAddAllItemsAtIndex" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ListLinkerTester" />
       <extension name="coverage">
         <pattern>
@@ -189,23 +183,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="test" />
       <option name="MAIN_CLASS_NAME" value="test.ArrayListTest" />
-      <option name="METHOD_NAME" value="add_ExpectListSizeToIncreaseBy1" />
+      <option name="METHOD_NAME" value="addAll_AtSpecificIndex_ShouldAddAllItemsAtIndex" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main.add_ExpectListSizeToIncreaseBy1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ListLinkerTester" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="Main" />
-      <option name="METHOD_NAME" value="add_ExpectListSizeToIncreaseBy1" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="test in ListLinkerTester" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ArrayListTest.addAll_ShouldAddAllItemsToEnd" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ListLinkerTester" />
       <extension name="coverage">
         <pattern>
@@ -214,22 +198,76 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="test" />
-      <option name="TEST_OBJECT" value="package" />
+      <option name="MAIN_CLASS_NAME" value="test.ArrayListTest" />
+      <option name="METHOD_NAME" value="addAll_ShouldAddAllItemsToEnd" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ArrayListTest.add_addThree_ExpectThemAddedToEnd" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ListLinkerTester" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.ArrayListTest" />
+      <option name="METHOD_NAME" value="add_addThree_ExpectThemAddedToEnd" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ArrayListTest.add_atIndex0_ExpectListInReverseOrder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ListLinkerTester" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.ArrayListTest" />
+      <option name="METHOD_NAME" value="add_atIndex0_ExpectListInReverseOrder" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ArrayListTest.add_atSpecificIndex_ExpectIndexToContainValue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ListLinkerTester" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.ArrayListTest" />
+      <option name="METHOD_NAME" value="add_atSpecificIndex_ExpectIndexToContainValue" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
       <item itemvalue="Application.Main" />
-      <item itemvalue="JUnit.Main.add_ExpectListSizeToIncreaseBy1" />
-      <item itemvalue="JUnit.test in ListLinkerTester" />
-      <item itemvalue="JUnit.ArrayListTest.add_ExpectListSizeToIncreaseBy1" />
+      <item itemvalue="JUnit.ArrayListTest.add_addThree_ExpectThemAddedToEnd" />
+      <item itemvalue="JUnit.ArrayListTest.add_atSpecificIndex_ExpectIndexToContainValue" />
+      <item itemvalue="JUnit.ArrayListTest.add_atIndex0_ExpectListInReverseOrder" />
+      <item itemvalue="JUnit.ArrayListTest.addAll_ShouldAddAllItemsToEnd" />
+      <item itemvalue="JUnit.ArrayListTest.addAll_AtSpecificIndex_ShouldAddAllItemsAtIndex" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ArrayListTest.add_ExpectListSizeToIncreaseBy1" />
-        <item itemvalue="JUnit.test in ListLinkerTester" />
-        <item itemvalue="JUnit.Main.add_ExpectListSizeToIncreaseBy1" />
+        <item itemvalue="JUnit.ArrayListTest.addAll_AtSpecificIndex_ShouldAddAllItemsAtIndex" />
+        <item itemvalue="JUnit.ArrayListTest.addAll_ShouldAddAllItemsToEnd" />
+        <item itemvalue="JUnit.ArrayListTest.add_addThree_ExpectThemAddedToEnd" />
+        <item itemvalue="JUnit.ArrayListTest.add_atIndex0_ExpectListInReverseOrder" />
+        <item itemvalue="JUnit.ArrayListTest.add_atSpecificIndex_ExpectIndexToContainValue" />
       </list>
     </recent_temporary>
   </component>
@@ -243,44 +281,44 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1616211467103</updated>
-      <workItem from="1616211469830" duration="1311000" />
+      <workItem from="1616211469830" duration="1756000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Main_add_ExpectListSizeToIncreaseBy1 - 2021.03.20 at 11h 44m 49s.xml">
-      <configuration name="Main.add_ExpectListSizeToIncreaseBy1" configurationId="JUnit" />
+    <history-entry file="ArrayListTest - 2021.03.20 at 12h 01m 27s.xml">
+      <configuration name="ArrayListTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Main_add_ExpectListSizeToIncreaseBy1 - 2021.03.20 at 11h 45m 27s.xml">
-      <configuration name="Main.add_ExpectListSizeToIncreaseBy1" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Main_add_ExpectListSizeToIncreaseBy1 - 2021.03.20 at 11h 45m 49s.xml">
-      <configuration name="Main.add_ExpectListSizeToIncreaseBy1" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Main_add_ExpectListSizeToIncreaseBy1 - 2021.03.20 at 11h 46m 21s.xml">
-      <configuration name="Main.add_ExpectListSizeToIncreaseBy1" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="test_in_ListLinkerTester - 2021.03.20 at 11h 56m 08s.xml">
-      <configuration name="test in ListLinkerTester" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="test_in_ListLinkerTester - 2021.03.20 at 11h 56m 50s.xml">
-      <configuration name="test in ListLinkerTester" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="test_in_ListLinkerTester - 2021.03.20 at 11h 57m 35s.xml">
-      <configuration name="test in ListLinkerTester" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="test_in_ListLinkerTester - 2021.03.20 at 11h 57m 52s.xml">
-      <configuration name="test in ListLinkerTester" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="test_in_ListLinkerTester - 2021.03.20 at 11h 58m 39s.xml">
-      <configuration name="test in ListLinkerTester" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ArrayListTest_add_ExpectListSizeToIncreaseBy1 - 2021.03.20 at 11h 59m 43s.xml">
+    <history-entry file="ArrayListTest_add_ExpectListSizeToIncreaseBy1 - 2021.03.20 at 12h 01m 44s.xml">
       <configuration name="ArrayListTest.add_ExpectListSizeToIncreaseBy1" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ArrayListTest_add_addTwo_ExpectListSizeToIncreaseBy2 - 2021.03.20 at 12h 01m 46s.xml">
+      <configuration name="ArrayListTest.add_addTwo_ExpectListSizeToIncreaseBy2" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ArrayListTest_add_addThree_ExpectThemAddedToEnd - 2021.03.20 at 12h 01m 50s.xml">
+      <configuration name="ArrayListTest.add_addThree_ExpectThemAddedToEnd" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ArrayListTest_add_atSpecificIndex_ExpectIndexToContainValue - 2021.03.20 at 12h 03m 01s.xml">
+      <configuration name="ArrayListTest.add_atSpecificIndex_ExpectIndexToContainValue" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ArrayListTest_add_atSpecificIndex_ExpectIndexToContainValue - 2021.03.20 at 12h 03m 56s.xml">
+      <configuration name="ArrayListTest.add_atSpecificIndex_ExpectIndexToContainValue" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ArrayListTest_add_atIndex0_ExpectListInReverseOrder - 2021.03.20 at 12h 04m 00s.xml">
+      <configuration name="ArrayListTest.add_atIndex0_ExpectListInReverseOrder" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ArrayListTest_add_addThree_ExpectThemAddedToEnd - 2021.03.20 at 12h 05m 32s.xml">
+      <configuration name="ArrayListTest.add_addThree_ExpectThemAddedToEnd" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ArrayListTest_addAll_ShouldAddAllItemsToEnd - 2021.03.20 at 12h 07m 02s.xml">
+      <configuration name="ArrayListTest.addAll_ShouldAddAllItemsToEnd" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ArrayListTest_addAll_ShouldAddAllItemsToEnd - 2021.03.20 at 12h 07m 14s.xml">
+      <configuration name="ArrayListTest.addAll_ShouldAddAllItemsToEnd" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1311000" />
+    <option name="totallyTimeSpent" value="1756000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -298,7 +336,7 @@
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" />
       <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Messages" />
+      <window_info anchor="bottom" id="Messages" weight="0.32936078" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32936078" />
@@ -334,16 +372,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/lists/ArrayList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="142" selection-start-line="142" selection-end-line="142" />
-          <folding>
-            <element signature="e#2873#2874#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -356,8 +384,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/ArrayListTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4556">
-          <caret line="279" column="16" selection-start-line="279" selection-start-column="16" selection-end-line="279" selection-end-column="16" />
+        <state relative-caret-position="272">
+          <caret line="94" column="34" selection-start-line="94" selection-start-column="34" selection-end-line="94" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lists/ArrayList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="36" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
+          <folding>
+            <element signature="e#210#211#0" expanded="true" />
+            <element signature="e#233#234#0" expanded="true" />
+            <element signature="e#2846#2847#0" expanded="true" />
+            <element signature="e#2873#2874#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
