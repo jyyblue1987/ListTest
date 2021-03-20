@@ -1,45 +1,101 @@
 package lists;
 
+/**
+ * a generic list collection that is backed by an Object array that stored in
+ * contiguous memory locations
+ *
+ * @author YOUR NAME
+ * @version 1.0
+ * @since 2021-03-20
+ */
+
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 
 public class LinkedList <E> implements Iterable<E> {
-    private static final int DEFAULT_CAPACITY = 10;
-
     private int size;
     private Node<E> head;
     private Node<E> tail;
+
+    /**
+     * Constructor
+     *
+     * @param
+     * @return
+     */
 
     public LinkedList() {
         clear();
     }
 
+
+    /**
+     * Check if list empty
+     *
+     * @param
+     * @return  true: empty,
+     *          false: non empty
+     */
+
     public boolean isEmpty() {
         return size == 0;
     }
+
+    /**
+     * Check if object is contained in list
+     *
+     * @param   Object o:
+     * @return  true: contained,
+     *          false: not exist
+     */
 
     public boolean contains(Object o)
     {
         return (indexOf(o) != -1);
     }
 
+    /**
+     * Generate Iterator
+     *
+     * @param
+     * @return  Iterator
+     */
+
     public Iterator<E> iterator() {
         return new ArrayListIterator();
     }
 
+    /**
+     * Add element to list
+     *
+     * @param e: inserted element
+     * @return  true/false : success/fail
+     */
+
     public boolean add(E e) {
-        return add(size, e);
+        add(size, e);
+        return true;
     }
+
+    /**
+     * Remove element from list
+     *
+     * @param e: remove element
+     * @return  true/false : success/fail
+     */
 
     public boolean remove(Object o) {
         Node cur = head;
         if( head == null )
             return false;
 
+        boolean result = false;
+
         if( o.equals(head.e) )
         {
             head = head.next;
+            result = true;
         }
         else {
             while (cur != null) {
@@ -50,6 +106,8 @@ public class LinkedList <E> implements Iterable<E> {
                         cur.next = next.next;
                     else
                         cur.next = null;
+
+                    result = true;
                     break;
                 }
                 cur = cur.next;
@@ -57,34 +115,61 @@ public class LinkedList <E> implements Iterable<E> {
         }
 
         size--;
-        return true;
+        return result;
     }
+
+    /**
+     * add element list to last position of list
+     *
+     * @param c: element list
+     * @return  true/false : success/fail
+     */
 
     public boolean addAll(Collection<? extends E> c) {
         for (E e : c){
-            if( add(e) == false )
-                return false;
+            add(e);
         }
 
         return true;
     }
 
+    /**
+     * add element list to last position of list
+     *
+     * @param   c: element list
+     *          index: inserted position
+     * @return  true/false : success/fail
+     */
+
     public boolean addAll(int index, Collection<? extends E> c) {
         int i = index;
         for (E e : c){
-            if( add(i, e) == false )
-                return false;
+            add(i, e);
             i++;
         }
 
         return true;
     }
 
+    /**
+     * clear list
+     *
+     * @param
+     * @return
+     */
+
     public void clear() {
         size = 0;
         head = null;
         tail = null;
     }
+
+    /**
+     * Pick an element from list at position
+     *
+     * @param index: position
+     * @return picked element
+     */
 
     public E get(int index) {
         Node cur = head;
@@ -100,6 +185,13 @@ public class LinkedList <E> implements Iterable<E> {
 
         return null;
     }
+
+    /**
+     * set an element to list at position
+     *
+     * @param index: position
+     * @return original element
+     */
 
     public E set(int index, E newVal) {
         if (index < 0 || index >= size) throw new ArrayIndexOutOfBoundsException();
@@ -121,14 +213,22 @@ public class LinkedList <E> implements Iterable<E> {
         return old;
     }
 
-    public boolean add(int index, E e) {
+    /**
+     * Add element to list
+     *
+     * @param   index: inserted position
+     *          e: inserted element
+     * @return
+     */
+
+    public void add(int index, E element) {
         if( index > size )
-            return false;
+            return;
 
         boolean result = false;
 
         Node node = new Node();
-        node.e = e;
+        node.e = element;
         node.next = null;
 
 
@@ -158,9 +258,15 @@ public class LinkedList <E> implements Iterable<E> {
         }
 
         size++;
-
-        return result;
     }
+
+    /**
+     * Remove element from list
+     *
+     * @param   index: removed position
+     *
+     * @return Removed element
+     */
 
     public E remove(int index) {
         if( index < 0 || index >= size )
@@ -197,6 +303,14 @@ public class LinkedList <E> implements Iterable<E> {
         return old;
     }
 
+    /**
+     * find index of object in list from left
+     *
+     * @param   o: object
+     *
+     * @return object position
+     */
+
     public int indexOf(Object o)
     {
         int result = -1;
@@ -216,6 +330,14 @@ public class LinkedList <E> implements Iterable<E> {
         return result;
     }
 
+    /**
+     * find index of object in list from right
+     *
+     * @param   o: object
+     *
+     * @return object position
+     */
+
     public int lastIndexOf(Object o)
     {
         int result = -1;
@@ -234,6 +356,15 @@ public class LinkedList <E> implements Iterable<E> {
         return result;
     }
 
+    /**
+     * get sub list from list
+     *
+     * @param   fromIndex: start index
+     *          toIndex: end index
+     *
+     * @return collection of sublist
+     */
+
     public List<E> subList(int fromIndex, int toIndex)
     {
         List<E> sublist = new java.util.ArrayList<E>();
@@ -251,6 +382,15 @@ public class LinkedList <E> implements Iterable<E> {
 
         return sublist;
     }
+
+    /**
+     * get size of list
+     *
+     * @param
+     *
+     * @return size of list
+     */
+
 
     public int size() {
         return size;
