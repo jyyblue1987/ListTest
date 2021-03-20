@@ -396,7 +396,6 @@ public class LinkedList <E> implements Iterable<E> {
         return size;
     }
 
-
     private class ArrayListIterator implements Iterator<E> {
 
         private Node current = head;

@@ -39,7 +39,7 @@ public class ArrayListTest {
 	@Test
 	public void add_addThree_ExpectThemAddedToEnd() {
 		ArrayList list = new ArrayList<Integer>();
-		List expectedOrder = Arrays.asList(5, 10, 15);
+		List expectedOrder = List.of(5, 10, 15);
 
 		list.add(5);
 		list.add(10);
@@ -65,7 +65,7 @@ public class ArrayListTest {
 	@Test
 	public void add_atIndex0_ExpectListInReverseOrder() {
 		ArrayList list = new ArrayList<String>();
-		List expectedOrder = Arrays.asList("Geralt", "of", "Rivia");
+		List expectedOrder = List.of("Geralt", "of", "Rivia");
 
 		list.add(0, "Rivia");
 		list.add(0, "of");
@@ -77,7 +77,7 @@ public class ArrayListTest {
 	@Test
 	public void addAll_ShouldAddAllItemsToEnd() {
 		ArrayList list = new ArrayList<Integer>();
-		List toAdd = Arrays.asList(3, 4, 5, 6);
+		List toAdd = List.of(3, 4, 5, 6);
 		int expectedSize = 6;
 
 		list.add(1);
@@ -93,7 +93,7 @@ public class ArrayListTest {
 	@Test
 	public void addAll_AtSpecificIndex_ShouldAddAllItemsAtIndex() {
 		ArrayList list = new ArrayList<Integer>();
-		List toAdd = Arrays.asList(3, 4, 5, 6);
+		List toAdd = List.of(3, 4, 5, 6);
 		int expectedSize = 6;
 
 		list.add(1);
@@ -190,7 +190,7 @@ public class ArrayListTest {
 		ArrayList list = new ArrayList<Integer>();
 		int expectedIndex = 5;
 		int value = 42;
-		List toAdd = Arrays.asList(0, 1, value, value, 4, value, 6, 7, 8, 9, 10);
+		List toAdd = List.of(0, 1, value, value, 4, value, 6, 7, 8, 9, 10);
 
 		list.addAll(toAdd);
 
@@ -202,7 +202,7 @@ public class ArrayListTest {
 		ArrayList list = new ArrayList<Integer>();
 		int expectedIndex = -1;
 		int value = 42;
-		List toAdd = Arrays.asList(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+		List toAdd = List.of(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
 
 		list.addAll(toAdd);
 
@@ -214,7 +214,7 @@ public class ArrayListTest {
 		ArrayList list = new ArrayList<String>();
 		int removeAt = 0;
 		String value = "hello";
-		List toAdd = Arrays.asList(value, "world", "I'm", "java");
+		List toAdd = List.of(value, "world", "I'm", "java");
 		list.addAll(toAdd);
 		int sizeBeforeRemove = list.size();
 
@@ -233,7 +233,7 @@ public class ArrayListTest {
 		int removeAt = 42;
 		String value = "hello";
 
-		List toAdd = Arrays.asList(value, "world", "I'm", "java");
+		List toAdd = List.of(value, "world", "I'm", "java");
 		list.addAll(toAdd);
 		int sizeBeforeRemove = list.size();
 
@@ -248,7 +248,7 @@ public class ArrayListTest {
 		ArrayList list = new ArrayList<String>();
 		int removeAt = 0;
 		String value = "hello";
-		List toAdd = Arrays.asList(value, "world", "I'm", "java");
+		List toAdd = List.of(value, "world", "I'm", "java");
 		list.addAll(toAdd);
 		int sizeBeforeRemove = list.size();
 
@@ -270,7 +270,7 @@ public class ArrayListTest {
 	@Test
 	public void iterator_FullListHasNext_ShouldReturnTrue() {
 		ArrayList list = new ArrayList<String>();
-		List toAdd = Arrays.asList("Sterling", "Goodfellow", "Iacas", "Tonwen");
+		List toAdd = List.of("Sterling", "Goodfellow", "Iacas", "Tonwen");
 		list.addAll(toAdd);
 		Iterator<String> itr = list.iterator();
 		assertEquals(itr.hasNext(), true);
@@ -279,7 +279,7 @@ public class ArrayListTest {
 	@Test
 	public void iterator_FullListNext_ShouldGetItem() {
 		ArrayList list = new ArrayList<String>();
-		List toAdd = Arrays.asList("Sterling", "Goodfellow", "Iacas", "Tonwen");
+		List toAdd = List.of("Sterling", "Goodfellow", "Iacas", "Tonwen");
 		list.addAll(toAdd);
 		Iterator<String> itrToAdd = toAdd.iterator();
 		for (Object element : list)
