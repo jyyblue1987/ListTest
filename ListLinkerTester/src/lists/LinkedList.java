@@ -34,7 +34,10 @@ public class LinkedList <E> implements Iterable<E> {
 
     public boolean remove(Object o) {
         Node cur = head;
-        if( o.equals(head) )
+        if( head == null )
+            return false;
+
+        if( o.equals(head.e) )
         {
             head = head.next;
         }
@@ -89,6 +92,8 @@ public class LinkedList <E> implements Iterable<E> {
         while(cur != null) {
             if( i == index )
                 return (E)cur.e;
+
+            cur = cur.next;
 
             i++;
         }
@@ -157,6 +162,40 @@ public class LinkedList <E> implements Iterable<E> {
         return result;
     }
 
+    public E remove(int index) {
+        if( index < 0 || index >= size )
+            return null;
+
+        Node cur = head;
+        E old = null;
+        if( index == 0 )
+        {
+            head = head.next;
+            old = (E)cur.e;
+        }
+        else {
+            int i = 0;
+            while (cur != null) {
+                Node next = cur.next;
+
+                if (i == index) {
+                    if (next != null)
+                        cur.next = next.next;
+                    else
+                        cur.next = null;
+
+                    old = (E)cur.e;
+
+                    break;
+                }
+                cur = cur.next;
+                i++;
+            }
+        }
+
+        size--;
+        return old;
+    }
 
     public int indexOf(Object o)
     {
@@ -223,13 +262,17 @@ public class LinkedList <E> implements Iterable<E> {
         private Node current = head;
 
         public boolean hasNext() {
+            if( current == null )
+                return false;
+
             return current.next != null;
         }
 
         public E next() {
             if (!hasNext()) throw new java.util.NoSuchElementException();
+            E e = (E)current.e;
             current = current.next;
-            return (E)current.e;
+            return e;
         }
     }
 }

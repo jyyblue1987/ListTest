@@ -233,23 +233,31 @@ public class DoublyLinkedList <E> implements Iterable<E> {
         private DoublyLinkedNode current = head;
 
         public boolean hasNext() {
+            if( current == null )
+                return false;
+
             return current.next != null;
         }
 
         public E next() {
             if (!hasNext()) throw new java.util.NoSuchElementException();
+            E e = (E)current.e;
             current = current.next;
-            return (E)current.e;
+            return e;
         }
 
         public boolean hasPrevious() {
+            if( current == null )
+                return false;
+
             return current.prev != null;
         }
 
         public E prev() {
             if (!hasPrevious()) throw new java.util.NoSuchElementException();
+            E e = (E)current.e;
             current = current.prev;
-            return (E)current.e;
+            return e;
         }
     }
 }
