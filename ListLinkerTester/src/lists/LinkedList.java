@@ -416,4 +416,16 @@ public class LinkedList <E> implements Iterable<E> {
             return e;
         }
     }
+
+    public List<E> array() {
+        Node<E> cur = head;
+        List<E> result = new java.util.ArrayList<E>();
+        while(cur != null) {
+            result.add(cur.e);
+            cur = cur.next;
+
+        }
+
+        return result;
+    }
 }

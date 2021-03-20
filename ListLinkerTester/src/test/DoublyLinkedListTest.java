@@ -47,7 +47,7 @@ public class DoublyLinkedListTest {
 		list.add(10);
 		list.add(15);
 
-		assertEquals(expectedOrder, list);
+		assertEquals(expectedOrder, list.array());
 	}
 
 	@Test
@@ -73,7 +73,7 @@ public class DoublyLinkedListTest {
 		list.add(0, "of");
 		list.add(0, "Geralt");
 
-		assertEquals(expectedOrder, list);
+		assertEquals(expectedOrder, list.array());
 	}
 
 	@Test

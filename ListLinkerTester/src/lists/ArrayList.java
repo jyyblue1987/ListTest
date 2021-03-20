@@ -316,4 +316,14 @@ public class ArrayList<E> implements Iterable<E> {
             items[i] = old[i];
         }
     }
+
+
+    public List<E> array() {
+        List<E> result = new java.util.ArrayList<E>();
+        for(int i = 0; i < size; i++)
+            result.add(items[i]);
+
+        return result;
+    }
+
 }
