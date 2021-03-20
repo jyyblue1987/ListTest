@@ -13,10 +13,10 @@ import java.util.List;
 import lists.ArrayList;
 import org.junit.Test;
 
-class ArrayListTest {
+public class ArrayListTest {
 
 	@Test
-	void add_ExpectListSizeToIncreaseBy1() {
+	public void add_ExpectListSizeToIncreaseBy1() {
 		ArrayList list = new ArrayList<Integer>();
 		int expectedSize = 1;
 
@@ -26,7 +26,7 @@ class ArrayListTest {
 	}
 
 	@Test
-	void add_addTwo_ExpectListSizeToIncreaseBy2() {
+	public void add_addTwo_ExpectListSizeToIncreaseBy2() {
 		ArrayList list = new ArrayList<Integer>();
 		int expectedSize = 2;
 
@@ -37,7 +37,7 @@ class ArrayListTest {
 	}
 
 	@Test
-	void add_addThree_ExpectThemAddedToEnd() {
+	public void add_addThree_ExpectThemAddedToEnd() {
 		ArrayList list = new ArrayList<Integer>();
 		List expectedOrder = Arrays.asList(5, 10, 15);
 
@@ -49,7 +49,7 @@ class ArrayListTest {
 	}
 
 	@Test
-	void add_atSpecificIndex_ExpectIndexToContainValue() {
+	public void add_atSpecificIndex_ExpectIndexToContainValue() {
 		ArrayList list = new ArrayList<String>();
 		int expectedSize = 3;
 
@@ -63,7 +63,7 @@ class ArrayListTest {
 	}
 
 	@Test
-	void add_atIndex0_ExpectListInReverseOrder() {
+	public void add_atIndex0_ExpectListInReverseOrder() {
 		ArrayList list = new ArrayList<String>();
 		List expectedOrder = Arrays.asList("Geralt", "of", "Rivia");
 
@@ -75,7 +75,7 @@ class ArrayListTest {
 	}
 
 	@Test
-	void addAll_ShouldAddAllItemsToEnd() {
+	public void addAll_ShouldAddAllItemsToEnd() {
 		ArrayList list = new ArrayList<Integer>();
 		List toAdd = Arrays.asList(3, 4, 5, 6);
 		int expectedSize = 6;
@@ -91,7 +91,7 @@ class ArrayListTest {
 	}
 
 	@Test
-	void addAll_AtSpecificIndex_ShouldAddAllItemsAtIndex() {
+	public void addAll_AtSpecificIndex_ShouldAddAllItemsAtIndex() {
 		ArrayList list = new ArrayList<Integer>();
 		List toAdd = Arrays.asList(3, 4, 5, 6);
 		int expectedSize = 6;
@@ -106,7 +106,7 @@ class ArrayListTest {
 	}
 
 	@Test
-	void clear_ShouldMakeListSizeZero() {
+	public void clear_ShouldMakeListSizeZero() {
 		ArrayList list = new ArrayList<Integer>();
 		int expectedSize = 0;
 
@@ -118,7 +118,7 @@ class ArrayListTest {
 	}
 
 	@Test
-	void contains_ItemIsInList_ShouldReturnTrue() {
+	public void contains_ItemIsInList_ShouldReturnTrue() {
 		ArrayList list = new ArrayList<String>();
 		String item = "42";
 
@@ -129,7 +129,7 @@ class ArrayListTest {
 	}
 
 	@Test
-	void contains_ItemIsNotInList_ShouldReturnFalse() {
+	public void contains_ItemIsNotInList_ShouldReturnFalse() {
 		ArrayList list = new ArrayList<String>();
 		String item = "42";
 
@@ -140,7 +140,7 @@ class ArrayListTest {
 	}
 
 	@Test
-	void indexOf_ItemIsInList_ShouldReturnIndex() {
+	public void indexOf_ItemIsInList_ShouldReturnIndex() {
 		ArrayList list = new ArrayList<Integer>();
 		int expectedIndex = 4;
 		int value = 42;
@@ -155,7 +155,7 @@ class ArrayListTest {
 	}
 
 	@Test
-	void indexOf_ItemIsNotInList_ShouldReturnNegative1() {
+	public void indexOf_ItemIsNotInList_ShouldReturnNegative1() {
 		ArrayList list = new ArrayList<Integer>();
 		int expectedIndex = -1;
 		int value = 39;
@@ -170,14 +170,14 @@ class ArrayListTest {
 	}
 
 	@Test
-	void isEmpty_EmptyList_ShouldReturnTrue() {
+	public void isEmpty_EmptyList_ShouldReturnTrue() {
 		ArrayList list = new ArrayList<String>();
 
 		assertTrue(list.isEmpty());
 	}
 
 	@Test
-	void isEmpty_ListHasItems_ShouldReturnFalse() {
+	public void isEmpty_ListHasItems_ShouldReturnFalse() {
 		ArrayList list = new ArrayList<String>();
 		list.add("hello");
 		list.add("world");
@@ -186,7 +186,7 @@ class ArrayListTest {
 	}
 
 	@Test
-	void lastIndexOf_ItemAppearsMultipleTimes_ShouldReturnIndex() {
+	public void lastIndexOf_ItemAppearsMultipleTimes_ShouldReturnIndex() {
 		ArrayList list = new ArrayList<Integer>();
 		int expectedIndex = 5;
 		int value = 42;
@@ -198,7 +198,7 @@ class ArrayListTest {
 	}
 
 	@Test
-	void lastIndexOf_ItemDoesNotAppear_ShouldReturnIndex() {
+	public void lastIndexOf_ItemDoesNotAppear_ShouldReturnIndex() {
 		ArrayList list = new ArrayList<Integer>();
 		int expectedIndex = -1;
 		int value = 42;
@@ -210,7 +210,7 @@ class ArrayListTest {
 	}
 
 	@Test
-	void remove_Index_ShouldRemoveItemAtIndex() {
+	public void remove_Index_ShouldRemoveItemAtIndex() {
 		ArrayList list = new ArrayList<String>();
 		int removeAt = 0;
 		String value = "hello";
@@ -228,7 +228,7 @@ class ArrayListTest {
 	}
 
 	@Test
-	void remove_IndexDoesNotExist_ShouldReturnNull() {
+	public void remove_IndexDoesNotExist_ShouldReturnNull() {
 		ArrayList list = new ArrayList<String>();
 		int removeAt = 42;
 		String value = "hello";
@@ -244,7 +244,7 @@ class ArrayListTest {
 	}
 
 	@Test
-	void remove_ObjectParam_ShouldReturnTrue() {
+	public void remove_ObjectParam_ShouldReturnTrue() {
 		ArrayList list = new ArrayList<String>();
 		int removeAt = 0;
 		String value = "hello";
@@ -261,14 +261,14 @@ class ArrayListTest {
 	}
 
 	@Test
-	void iterator_EmptyListHasNext_ShouldReturnFalse() {
+	public void iterator_EmptyListHasNext_ShouldReturnFalse() {
 		ArrayList list = new ArrayList<String>();
 		Iterator<String> itr = list.iterator();
 		assertEquals(itr.hasNext(), false);
 	}
 
 	@Test
-	void iterator_FullListHasNext_ShouldReturnTrue() {
+	public void iterator_FullListHasNext_ShouldReturnTrue() {
 		ArrayList list = new ArrayList<String>();
 		List toAdd = Arrays.asList("Sterling", "Goodfellow", "Iacas", "Tonwen");
 		list.addAll(toAdd);
@@ -277,7 +277,7 @@ class ArrayListTest {
 	}
 
 	@Test
-	void iterator_FullListNext_ShouldGetItem() {
+	public void iterator_FullListNext_ShouldGetItem() {
 		ArrayList list = new ArrayList<String>();
 		List toAdd = Arrays.asList("Sterling", "Goodfellow", "Iacas", "Tonwen");
 		list.addAll(toAdd);

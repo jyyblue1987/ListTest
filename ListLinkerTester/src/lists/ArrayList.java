@@ -144,7 +144,7 @@ public class ArrayList<E> implements Iterable<E> {
     }
 
 
-    private class ArrayListIterator implements java.util.Iterator<E> {
+    private class ArrayListIterator implements Iterator<E> {
 
         private int current = 0;
 
@@ -153,7 +153,7 @@ public class ArrayList<E> implements Iterable<E> {
         }
 
         public E next() {
-            if (!hasNext()) throw new java.util.NoSuchElementException();
+            if (!hasNext()) throw new NoSuchElementException();
             return items[current++];
         }
     }
