@@ -80,7 +80,7 @@ public class ArrayList<E> implements Iterable<E> {
         return old;
     }
 
-    public boolean add(int index, E element) {
+    public boolean add(int index, E e) {
         if( index > size )
             return false;
 
@@ -89,7 +89,7 @@ public class ArrayList<E> implements Iterable<E> {
         for (int i = size; i > index; i--) {
             items[i] = items[i - 1];
         }
-        items[index] = element;
+        items[index] = e;
         size++;
 
         return true;
